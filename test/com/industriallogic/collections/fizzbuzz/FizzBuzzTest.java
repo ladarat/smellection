@@ -5,11 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class FizzBuzzTest {
-
     private FizzBuzz fizzBuzz;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         fizzBuzz = new FizzBuzz();
     }
 
@@ -28,9 +27,23 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void give_3_it_should_be_return_3() {
+    public void give_3_it_should_be_return_Fizz() {
         String actual = fizzBuzz.answer(3);
 
-        Assert.assertEquals("Fizz", actual);
+        Assert.assertEquals(FizzBuzz.FIZZ, actual);
+    }
+
+    @Test
+    public void give_9_it_should_be_return_Fizz() {
+        String actual = fizzBuzz.answer(9);
+
+        Assert.assertEquals(FizzBuzz.FIZZ, actual);
+    }
+
+    @Test
+    public void give_6_it_should_be_return_Fizz() {
+        String actual = fizzBuzz.answer(6);
+
+        Assert.assertEquals(FizzBuzz.FIZZ, actual);
     }
 }
