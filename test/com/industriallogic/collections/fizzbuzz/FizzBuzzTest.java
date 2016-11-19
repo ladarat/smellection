@@ -30,48 +30,48 @@ public class FizzBuzzTest {
     public void give_3_it_should_be_return_Fizz() {
         String actual = fizzBuzz.answer(3);
 
-        Assert.assertEquals(FizzBuzz.FIZZ, actual);
+        Assert.assertEquals(FizzRule.FIZZ, actual);
     }
 
     @Test
     public void give_9_it_should_be_return_Fizz() {
         String actual = fizzBuzz.answer(9);
 
-        Assert.assertEquals(FizzBuzz.FIZZ, actual);
+        Assert.assertEquals(FizzRule.FIZZ, actual);
     }
 
     @Test
     public void give_6_it_should_be_return_Fizz() {
         String actual = fizzBuzz.answer(6);
 
-        Assert.assertEquals(FizzBuzz.FIZZ, actual);
+        Assert.assertEquals(FizzRule.FIZZ, actual);
     }
 
     @Test
     public void give_5_it_should_be_return_Buzz() {
         String actual = fizzBuzz.answer(5);
 
-        Assert.assertEquals(FizzBuzz.BUZZ, actual);
+        Assert.assertEquals(BuzzRule.BUZZ, actual);
     }
 
     @Test
     public void give_10_it_should_be_return_Buzz() {
         String actual = fizzBuzz.answer(10);
 
-        Assert.assertEquals(FizzBuzz.BUZZ, actual);
+        Assert.assertEquals(BuzzRule.BUZZ, actual);
     }
 
     @Test
     public void give_15_it_should_be_return_FizzBuzz() {
         String actual = fizzBuzz.answer(15);
 
-        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, actual);
+        Assert.assertEquals(FizzBuzzRule.FIZZ_BUZZ, actual);
     }
 
     @Test
     public void give_30_it_should_be_return_FizzBuzz() {
         String actual = fizzBuzz.answer(30);
 
-        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, actual);
+        Assert.assertEquals(FizzBuzzRule.FIZZ_BUZZ, actual);
     }
 }

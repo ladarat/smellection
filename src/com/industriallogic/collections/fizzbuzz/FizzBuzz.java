@@ -2,24 +2,21 @@ package com.industriallogic.collections.fizzbuzz;
 
 public class FizzBuzz {
 
-    public static final String FIZZ = "Fizz";
-    public static final String BUZZ = "Buzz";
-    public static final String FIZZ_BUZZ = "FizzBuzz";
 
     public String answer(int number){
-        if(isDivideBy3(number) && number %5 == 0){
-            return FIZZ_BUZZ;
+        FizzRule fizzRule = new FizzRule();
+        BuzzRule buzzRule = new BuzzRule();
+        FizzBuzzRule fizzBuzzRule = new FizzBuzzRule();
+        if(fizzBuzzRule.isFizzBuzz(number)){
+            return fizzBuzzRule.answer();
         }
-        if(isDivideBy3(number)){
-            return FIZZ;
+        if(fizzRule.isFizz(number)){
+            return fizzRule.answer();
         }
-        if(number%5 == 0){
-            return BUZZ;
+        if(BuzzRule.isBuzz(number)){
+            return buzzRule.answer();
         }
         return String.valueOf(number);
     }
 
-    private boolean isDivideBy3(int number) {
-        return number%3 == 0;
-    }
 }
