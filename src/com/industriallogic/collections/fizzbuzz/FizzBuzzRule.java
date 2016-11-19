@@ -1,10 +1,10 @@
 package com.industriallogic.collections.fizzbuzz;
 
-public class FizzBuzzRule {
+public class FizzBuzzRule implements Rule{
     public static final String FIZZ_BUZZ = "FizzBuzz";
 
-    public boolean isFizzBuzz(int number) {
-        return new FizzRule().isFizz(number) && new BuzzRule().isBuzz(number);
+    public boolean check(int number) {
+        return new FizzRule().check(number) && new BuzzRule().check(number);
     }
 
     public String answer() {

@@ -1,9 +1,9 @@
 package com.industriallogic.collections.fizzbuzz;
 
-public class FizzRule {
+public class FizzRule implements Rule{
     public static final String FIZZ = "Fizz";
 
-    public boolean isFizz(int number) {
+    public boolean check(int number) {
         return number%3 == 0;
     }
 
