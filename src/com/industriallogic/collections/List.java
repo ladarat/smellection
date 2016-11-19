@@ -24,7 +24,7 @@ public class List extends AbstractList {
         if (readOnly) {
             return;
         }
-//        int newSize = size + 1;
+
         if (size + 1 > elements.length) {
             Object[] newElements =
                     new Object[elements.length + 10];
