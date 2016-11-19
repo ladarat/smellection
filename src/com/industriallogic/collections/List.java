@@ -26,14 +26,18 @@ public class List extends AbstractList {
         }
 
         if (size + 1 > elements.length) {
-            Object[] newElements =
-                    new Object[elements.length + 10];
-            for (int i = 0; i < size; i++)
-                newElements[i] = elements[i];
-            elements = newElements;
+            extendList();
         }
         elements[size++] = element;
 
+    }
+
+    private void extendList() {
+        Object[] newElements =
+                new Object[elements.length + 10];
+        for (int i = 0; i < size; i++)
+            newElements[i] = elements[i];
+        elements = newElements;
     }
 
     public boolean contains(Object element) {
