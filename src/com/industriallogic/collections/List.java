@@ -25,11 +25,19 @@ public class List extends AbstractList {
             return;
         }
 
-        if (size + 1 > elements.length) {
+        if (isFull()) {
             extendList();
         }
-        elements[size++] = element;
+        putList(element);
 
+    }
+
+    private void putList(Object element) {
+        elements[size++] = element;
+    }
+
+    private boolean isFull() {
+        return size + 1 > elements.length;
     }
 
     private void extendList() {
