@@ -60,4 +60,11 @@ public class FizzBuzzTest {
 
         Assert.assertEquals(FizzBuzz.BUZZ, actual);
     }
+
+    @Test
+    public void give_15_it_should_be_return_FizzBuzz() {
+        String actual = fizzBuzz.answer(15);
+
+        Assert.assertEquals("FizzBuzz", actual);
+    }
 }
