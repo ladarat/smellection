@@ -12,8 +12,6 @@
 package com.industriallogic.collections;
 
 public class Set extends AbstractCollection {
-    private static int INITIAL_CAPACITY = 10;
-    private Object[] elements = new Object[INITIAL_CAPACITY];
     private int size = 0;
     private boolean readOnly;
 
@@ -30,7 +28,7 @@ public class Set extends AbstractCollection {
             Object[] newElements =
                     new Object[elements.length + INITIAL_CAPACITY];
             for (int i = 0; i < size; i++)
-                newElements[i] = elements[i];
+                newElements[i] = get(i);
             elements = newElements;
         }
 
@@ -42,7 +40,7 @@ public class Set extends AbstractCollection {
 
     public boolean contains(Object element) {
         for (int i = 0; i < size; i++)
-            if (elements[i].equals(element))
+            if (get(i).equals(element))
                 return true;
         return false;
     }
@@ -55,23 +53,19 @@ public class Set extends AbstractCollection {
         if (readOnly)
             return false;
         for (int i = 0; i < size; i++)
-            if (elements[i].equals(element)) {
+            if (get(i).equals(element)) {
                 elements[i] = null;
                 Object[] newElements = new Object[size - 1];
                 int k = 0;
                 for (int j = 0; j < size; j++) {
-                    if (elements[j] != null)
-                        newElements[k++] = elements[j];
+                    if (get(j) != null)
+                        newElements[k++] = get(j);
                 }
                 size--;
                 elements = newElements;
                 return true;
             }
         return false;
-    }
-
-    public Object get(int index) {
-        return elements[index];
     }
 
     public void addAll(List l) {
