@@ -13,7 +13,7 @@ public class FizzBuzz {
         if(fizzRule.isFizz(number)){
             return fizzRule.answer();
         }
-        if(BuzzRule.isBuzz(number)){
+        if(buzzRule.isBuzz(number)){
             return buzzRule.answer();
         }
         return String.valueOf(number);
