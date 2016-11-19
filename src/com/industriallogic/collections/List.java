@@ -13,12 +13,7 @@ package com.industriallogic.collections;
 
 public class List extends AbstractCollection {
     private Object[] elements = new Object[10];
-    private int size = 0;
     private boolean readOnly;
-
-    public boolean isEmpty() {
-        return size == 0;
-    }
 
     public void add(Object element) {
         if (readOnly) {

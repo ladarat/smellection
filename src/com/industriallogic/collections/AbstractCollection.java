@@ -12,6 +12,8 @@
 package com.industriallogic.collections;
 
 public abstract class AbstractCollection implements Collection {
+	protected int size = 0;
+
 	public void addAll(AbstractCollection c) {
 		if (c instanceof Set) {
 			Set s = (Set)c;
@@ -37,4 +39,8 @@ public abstract class AbstractCollection implements Collection {
 	
 	public void add(Object key, Object value) {
 	}
+
+	public boolean isEmpty() {
+        return size == 0;
+    }
 }
